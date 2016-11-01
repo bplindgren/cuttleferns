@@ -13,16 +13,17 @@ public class User {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", updatable = false, nullable = false)
     private long id;
 
 	@Column(name = "first_name")
-	private String first_name;
+	private String firstName;
 	
 	@Column(name = "last_name")
-	private String last_name;
+	private String lastName;
 	
 	@Column(name = "city_id")
-	private int city_id;
+	private int cityId;
 
 	public long getId() {
 		return id;
@@ -32,28 +33,28 @@ public class User {
 		this.id = id;
 	}
 
-	public String getFirst_name() {
-		return first_name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLast_name() {
-		return last_name;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public void setLast_name(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public int getCity_id() {
-		return city_id;
+	public int getCityId() {
+		return cityId;
 	}
 
-	public void setCity_id(int city_id) {
-		this.city_id = city_id;
+	public void setCity_id(int cityId) {
+		this.cityId = cityId;
 	}
 	
 }
